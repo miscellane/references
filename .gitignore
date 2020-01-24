@@ -12,8 +12,8 @@
 !libraries/hive_2.11-0.1.jar
 
 
-*/*/target/scala-2.11/classes/*
-*/*/target/test-reports/*
+*classes/*
+*test-reports/*
 
 
 # Scala-IDE specific
@@ -96,9 +96,9 @@ src_managed/
 streaming-tests.log
 
 
-*/*/target/resolution-cache
-*/*/target/streams
-*/*/target/.history
+*resolution-cache
+*streams
+*.history
 unit-tests.log
 work/
 

@@ -23,9 +23,7 @@ class S3DIR(operatingSystemWindows: Boolean) {
 
     // Deal with the string of headings, which excludes bucket & prefix names
     val splitsOfHeading = stringOfHeadings.split("/").map(_.trim)
-
     val listOfNames: ParArray[String] =  splitsOfHeading.par.filter(_.startsWith("PRE"))
-
     listOfNames.map(x => x.replace("PRE ", "")).map(_.trim).toList
 
   }

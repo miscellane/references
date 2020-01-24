@@ -15,16 +15,16 @@ class S3API {
 
 
     // Execute Query
-    val T: Try[String] = Exception.allCatch.withTry(
+    val output: Try[String] = Exception.allCatch.withTry(
       scala.sys.process.stringToProcess(queryString).!!
     )
 
 
     // States
-    if (T.isFailure) {
+    if (output.isFailure) {
       sys.error( s"The S3API query for $patternString failed" )
     } else {
-      T
+      output
     }
 
 

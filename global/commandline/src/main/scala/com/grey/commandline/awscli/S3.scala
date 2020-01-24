@@ -11,9 +11,8 @@ class S3(operatingSystemWindows: Boolean) {
   def RM(bucketString: String, filesConstraints: String = ""): Try[Int] = {
 
     val commandString = s"""aws s3 rm $bucketString $filesConstraints"""
-    println(commandString)
 
-    val F: Try[Int] = Exception.allCatch.withTry(
+    val action: Try[Int] = Exception.allCatch.withTry(
       if (operatingSystemWindows) {
         scala.sys.process.stringToProcess("cmd /C " + commandString).!
       } else {
@@ -21,10 +20,10 @@ class S3(operatingSystemWindows: Boolean) {
       }
     )
 
-    if (F.isFailure) {
-      sys.error("Error: " + F.failed.get.getMessage)
+    if (action.isFailure) {
+      sys.error("Error: " + action.failed.get.getMessage)
     } else {
-      F
+      action
     }
 
   }
@@ -36,7 +35,7 @@ class S3(operatingSystemWindows: Boolean) {
 
     val commandString = s"""aws s3 ls $bucketString $filesConstraints"""
 
-    val F: Try[Int] = Exception.allCatch.withTry(
+    val action: Try[Int] = Exception.allCatch.withTry(
       if (operatingSystemWindows) {
         scala.sys.process.stringToProcess("cmd /C " + commandString).!
       } else {
@@ -44,10 +43,10 @@ class S3(operatingSystemWindows: Boolean) {
       }
     )
 
-    if (F.isFailure) {
-      sys.error("Error: " + F.failed.get.getMessage)
+    if (action.isFailure) {
+      sys.error("Error: " + action.failed.get.getMessage)
     } else {
-      F
+      action
     }
 
   }
@@ -60,7 +59,7 @@ class S3(operatingSystemWindows: Boolean) {
 
     val commandString = s"""aws s3 cp $sourceString $targetString $filesConstraints"""
 
-    val F: Try[Int] = Exception.allCatch.withTry(
+    val action: Try[Int] = Exception.allCatch.withTry(
       if (operatingSystemWindows) {
         scala.sys.process.stringToProcess("cmd /C " + commandString).!
       } else {
@@ -68,10 +67,10 @@ class S3(operatingSystemWindows: Boolean) {
       }
     )
 
-    if (F.isFailure) {
-      sys.error("Error: " + F.failed.get.getMessage)
+    if (action.isFailure) {
+      sys.error("Error: " + action.failed.get.getMessage)
     } else {
-      F
+      action
     }
 
   }
@@ -84,7 +83,7 @@ class S3(operatingSystemWindows: Boolean) {
 
     val commandString = s"""aws s3 mv $targetString $sourceString $filesConstraints"""
 
-    val F: Try[Int] = Exception.allCatch.withTry(
+    val action: Try[Int] = Exception.allCatch.withTry(
       if (operatingSystemWindows) {
         scala.sys.process.stringToProcess("cmd /C " + commandString).!
       } else {
@@ -92,10 +91,10 @@ class S3(operatingSystemWindows: Boolean) {
       }
     )
 
-    if (F.isFailure) {
-      sys.error("Error: " + F.failed.get.getMessage)
+    if (action.isFailure) {
+      sys.error("Error: " + action.failed.get.getMessage)
     } else {
-      F
+      action
     }
 
 

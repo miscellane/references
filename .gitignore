@@ -12,6 +12,9 @@
 !libraries/hive_2.11-0.1.jar
 
 
+*DataCredentials.scala
+*DataDatabase.scala
+
 *classes/*
 *test-reports/*
 

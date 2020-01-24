@@ -12,13 +12,16 @@ lazy val root = (project in file(".")).
     resolvers ++= Seq(
       "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
       "Redshift" at "https://s3.amazonaws.com/redshift-maven-repository/release",
-      "Typesafe" at "https://repo.typesafe.com/typesafe/releases/"
+      "Typesafe" at "https://repo.typesafe.com/typesafe/releases/",
+      "JavaNet" at "JavaNet1Repository",
+      "Commons" at "https://mvnrepository.com/artifact/commons-codec/commons-codec"
     ),
 
     libraryDependencies ++= Seq(
       "org.apache.spark" % "spark-core_2.11" % "2.4.4" % "provided",
       "org.apache.spark" % "spark-sql_2.11" % "2.4.4" % "provided",
       "org.apache.hadoop" % "hadoop-aws" % "2.7.5" % "provided",
+      "commons-codec" % "commons-codec" % "1.9",
       "org.apache.logging.log4j" % "log4j-core" % "2.8.2",
       "com.databricks" % "spark-redshift_2.11" % "3.0.0-preview1" % "provided",
       "com.amazonaws" % "aws-java-sdk-core" % "1.11.580" % "provided",

@@ -19,15 +19,18 @@ class ClearUp(spark: SparkSession) {
          |WITH DBPROPERTIES (${hiveProperties.databaseProperties})
        """.stripMargin
 
-    val isCreateDatabase: Try[DataFrame] = Exception.allCatch.withTry(
+    val database: Try[DataFrame] = Exception.allCatch.withTry(
       spark.sql(createDatabase)
     )
 
 
     // Next, get the array of tables in the database.  Of course, this
     // will be empty at the beginning of time ...
-
-    val arrayOfTables: Array[String] = spark.sqlContext.tableNames(hiveProperties.databaseName)
+    val arrayOfTables: Array[String] =  if (database.isSuccess) {
+      spark.sqlContext.tableNames(hiveProperties.databaseName)
+    } else {
+      sys.error(database.failed.get.getMessage)
+    }
     val tableOfInterest: Array[String] = arrayOfTables.filter(_ == hiveProperties.tableName)
 
 

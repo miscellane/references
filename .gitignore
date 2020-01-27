@@ -1,22 +1,17 @@
 *.class
 *.log
 *.metal
-
-# Exclude
-**.jar
-*/libraries
-
-
-# Except
-!libraries/connectivity_2.11-0.1.jar
-!libraries/hive_2.11-0.1.jar
+*.jar
 
 
 *DataCredentials.scala
 *DataDatabase.scala
 
-*classes/*
-*test-reports/*
+1.0/
+*maven*
+classes/
+test-reports/
+target/
 
 
 # Scala-IDE specific

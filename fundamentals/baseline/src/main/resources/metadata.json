@@ -1,0 +1,57 @@
+{
+  "type": "struct",
+  "fields": [
+    {
+      "name": "image",
+      "type": "string",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "The original ISIC Challenge 2019 image name.",
+        "pattern": "\b(ISIC)_[0-9]{7}\b"
+      }
+    },
+    {
+      "name": "age_approx",
+      "type": "integer",
+      "nullable": true,
+      "metadata":
+      {
+        "comment": "The approximate age of the dermoscopic image subject.",
+        "default": 0,
+        "options": [0, 5, 10, 20, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85]
+      }
+    },
+    {
+      "name": "anatom_site_general",
+      "type": "string",
+      "nullable": true,
+      "metadata":
+      {
+        "comment": "The area of the body from whence the dermascopic image was acquired.",
+        "default": null
+      }
+    },
+    {
+      "name": "lesion_id",
+      "type": "string",
+      "nullable": true,
+      "metadata":
+      {
+        "comment": "Image identification codes particular to the primary sources of the images.",
+        "default": null
+      }
+    },
+    {
+      "name": "sex",
+      "type": "string",
+      "nullable": true,
+      "metadata":
+      {
+        "comment": "The sex of the subject.",
+        "default": null,
+        "options": ["female", "male"]
+      }
+    }
+    ]
+}

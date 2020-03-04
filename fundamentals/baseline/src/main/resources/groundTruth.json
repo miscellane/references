@@ -1,0 +1,104 @@
+{
+  "type": "struct",
+  "fields": [
+    {
+      "name": "image",
+      "type": "string",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "The original ISIC Challenge 2019 image name."
+      }
+    },
+    {
+      "name": "MEL",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Melanoma",
+        "default": 0
+      }
+    },
+    {
+      "name": "NV",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Melanocytic Nevus",
+        "default": 0
+      }
+    },
+    {
+      "name": "BCC",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Basal cell Carcinoma",
+        "default": 0
+      }
+    },
+    {
+      "name": "AK",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Actinic Keratosis",
+        "default": 0
+      }
+    },
+    {
+      "name": "BKL",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Benign Keratosis",
+        "default": 0
+      }
+    },
+    {
+      "name": "DF",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Dermatofibroma",
+        "default": 0
+      }
+    },
+    {
+      "name": "VASC",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Vascular Lesion",
+        "default": 0
+      }
+    },
+    {
+      "name": "SCC",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Squamous Cell Carcinoma",
+        "default": 0
+      }
+    },
+    {
+      "name": "UNK",
+      "type": "double",
+      "nullable": false,
+      "metadata":
+      {
+        "comment": "Unknown",
+        "default": 0
+      }
+    }
+  ]
+}

@@ -91,11 +91,13 @@ class AblyWeather(spark: SparkSession) {
         // Read-in the message via the message schema.
         val points: Dataset[String] = Seq(message.data.toString).toDS()
         val pointsFrame: DataFrame = spark.read.schema(schema).json(points)
+        pointsFrame.printSchema()
 
         // Explode: explode applies to arrays only; explode(arrays_zip()).
         val pointsFrameExploding = pointsFrame.select($"coord", explode($"weather").as("weather"),
           $"main", $"wind", $"clouds", $"rain", $"snow", $"sys", $"base", $"visibility", $"dt", $"timezone",
           $"id", $"name", $"cod")
+        pointsFrameExploding.printSchema()
 
         // Destructing
         val pointsFrameDestructing = pointsFrameExploding.select($"coord.*",
@@ -109,9 +111,6 @@ class AblyWeather(spark: SparkSession) {
           $"sys.country".as("sysCountry"), $"sys.sunrise".as("sysSunsrise"), $"sys.sunset".as("sysSunset"),
           $"base", $"visibility", $"dt".as("dataCalculationTime"), $"timezone",
           $"id".as("cityID"), $"name".as("cityName"), $"cod")
-
-        // Preview
-        pointsFrameDestructing.show()
 
         // Save
         val dateTimeNow: DateTime = DateTime.now()

@@ -9,8 +9,8 @@ class DataSteps(spark: SparkSession) {
     val ablyWeather = new AblyWeather(spark)
     ablyWeather.ablyWeather()
 
-    val ablyWeatherEvents = new AblyWeatherEvents(spark)
-    ablyWeatherEvents.ablyWeatherEvents()
+    // val ablyWeatherEvents = new AblyWeatherEvents(spark)
+    // ablyWeatherEvents.ablyWeatherEvents()
 
     // val ablyBitCoin = new AblyBitCoin()
     // ablyBitCoin.ablyBitCoin()

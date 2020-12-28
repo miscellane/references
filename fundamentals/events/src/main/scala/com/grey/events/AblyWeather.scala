@@ -1,6 +1,6 @@
 package com.grey.events
 
-import io.ably.lib.realtime.Channel.MessageListener
+import io.ably.lib.realtime.ChannelBase.MessageListener
 import io.ably.lib.realtime.{AblyRealtime, Channel}
 import io.ably.lib.types.Message
 import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
@@ -99,8 +99,8 @@ class AblyWeather(spark: SparkSession) {
           $"id", $"name", $"cod")
         pointsFrameExploding.printSchema()
 
-        // Destructing
-        val pointsFrameDestructing = pointsFrameExploding.select($"coord.*",
+        // Decomposing
+        val pointsFrameDecomposing = pointsFrameExploding.select($"coord.*",
           $"weather.id".as("weatherID"), $"weather.main".as("weatherMain"),
           $"weather.description".as("weatherDescription"), $"weather.icon".as("weatherIcon"),
           $"main.*", $"wind.speed".as("windSpeed"), $"wind.deg".as("windDeg"),
@@ -115,7 +115,8 @@ class AblyWeather(spark: SparkSession) {
         // Save
         val dateTimeNow: DateTime = DateTime.now()
         val instant: String = dateTimeFormat.print(dateTimeNow)
-        pointsFrameDestructing.coalesce(1).write.parquet(localSettings.dataDirectory + instant)
+        pointsFrameDecomposing.show()
+        pointsFrameDecomposing.coalesce(1).write.parquet(localSettings.dataDirectory + instant)
 
       }
     })

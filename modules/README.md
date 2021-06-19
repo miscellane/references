@@ -1,9 +1,4 @@
 ### Modules
 
-<dl>
-  <dt>[events](./events)</dt>  
-  <dd>Ably events</dd>
-
-  <dt>[wiki](./wiki)</dt>
-  <dd>An analysis of a Wikipedia data set.</dd>
-</dl>
+* [events](./events)<br>Ably events
+* [wiki](./wiki)<br>An analysis of a Wikipedia data set.

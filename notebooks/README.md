@@ -1,6 +1,6 @@
 ### Notebooks
 
-The HTML notebook files are Databricks notebooks.  Rendered forms of the notebooks are accessible via the links below; courtesy of [nbviewer](https://nbviewer.jupyter.org/).  The IPYNB notebooks are Jupyter Lab notebooks, which can be explored via Google Colab, hence the links below.
+The HTML notebook files are Databricks notebooks.  The rendered forms of the Databricks notebooks are accessible via the links below; the links are courtesy of [nbviewer](https://nbviewer.jupyter.org/).  The IPYNB notebooks are Jupyter Lab notebooks, which can be explored via Google Colab, hence the links below.
 
 <dl>
   <dt>derma.html</dt>  

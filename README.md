@@ -1,4 +1,4 @@
-# scala
+## References
 
 Explorations and notes w.r.t. (with respect to) Scala &amp; Apache Spark Scala.  This repository was initially a member of *premodelling*.
 

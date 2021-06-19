@@ -1,27 +1,24 @@
 ## Events
 
-Explorations and notes w.r.t. (with respect to) Ably streams, and supplementary data and tools.
+Explorations and notes w.r.t. Ably streams, and supplementary data and tools.
 
 <br>
-<br>
 
-### Development
+### Ably
 
 * [Ably Hub](https://www.ably.io/hub)
   * https://github.com/ably/ably-java
   * https://www.ably.io/documentation/realtime/channels
 
-<br>
-
 * [Ably OpenWeatherMap](https://www.ably.io/hub/ably-openweathermap)
   * [Product](https://www.ably.io/hub/ably-openweathermap/weather)
   
-<br>
-
 * Transport
   * [National Public Transport Access Node(NapTAN), National Public Transport Gazetteer (NPTG), etc.](https://naptan.app.dft.gov.uk/datarequest/help)
-
+  
 <br>
+
+### Development
 
 * [Avro Schema From JSON Generator](https://toolslick.com/generation/metadata/avro-schema-from-json)
 
@@ -32,8 +29,7 @@ Explorations and notes w.r.t. (with respect to) Ably streams, and supplementary 
   * [Maven SCM Plugin Usage](https://maven.apache.org/scm/maven-scm-plugin/usage.html)
   * [Git SCM](http://maven.apache.org/scm/git.html)
   * [Git SCM Configuration via SSH](https://github.com/marketplace/actions/maven-release)
-
-<br>
+  
 <br>
 
 ### Environment
@@ -44,3 +40,8 @@ Running the Apache Spark Scala fat `.jar` via `--master local`
     spark-submit --class com.grey.events.EventsApp --master local['${numberOfCores}'] 
     target/events-'${buildNumber}'-jar-with-dependencies.jar
 ```
+
+<br>
+<br>
+<br>
+<br>

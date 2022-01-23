@@ -177,16 +177,4 @@
     <finalName>${project.artifactId}-${project.version}.${buildNumber}</finalName>
   </build>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.scala-tools</groupId>
-        <artifactId>maven-scala-plugin</artifactId>
-        <configuration>
-          <scalaVersion>${scala.version}</scalaVersion>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>
-
 </project>

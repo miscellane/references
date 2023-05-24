@@ -28,7 +28,7 @@ The HTML notebook files are Databricks notebooks.  The rendered forms of the Dat
   <dt>reservations.ipynb</dt>
   <dd><a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/reservations/reservations.ipynb">reservations</a> focuses on bookings.</dd>
 
-  <dt>mini_project_linear_regression.ipynb, notes.ipynb</dt>
+  <dt>Boston Housing: mini_project_linear_regression.ipynb, notes.ipynb</dt>
   <dd><a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/boston/mini_project_linear_regression.ipynb">mini_project_linear_regression</a><br>
   <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/boston/notes.ipynb">notes</a></dd>
 </dl>

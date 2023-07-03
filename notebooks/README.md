@@ -31,6 +31,15 @@ The HTML notebook files are Databricks notebooks.  The rendered forms of the Dat
   <dt>Boston Housing: mini_project_linear_regression.ipynb, notes.ipynb</dt>
   <dd><a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/boston/mini_project_linear_regression.ipynb">mini_project_linear_regression</a><br>
   <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/boston/notes.ipynb">notes</a></dd>
+
+  <dt>Geography</dt>
+  <dd>
+    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/crime.ipynb" target="_blank">crime</a><br>
+    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/geocoding.ipynb" target="_blank">geocoding</a><br>
+    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/toxins.ipynb" target="_blank">toxins</a><br>
+    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/water.ipynb" target="_blank">water</a>
+  </dd>  
+
 </dl>
 
 

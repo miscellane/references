@@ -34,7 +34,7 @@ The HTML notebook files are Databricks notebooks.  The rendered forms of the Dat
 
   <dt>Geography</dt>
   <dd>
-    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/crime.ipynb">crime</a><br>
+    <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/crime.ipynb" target="_blank">crime</a><br>
     <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/geocoding.ipynb">geocoding</a><br>
     <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/toxins.ipynb">toxins</a><br>
     <a href="https://colab.research.google.com/github/miscellane/references/blob/develop/notebooks/geography/water.ipynb">water</a>
